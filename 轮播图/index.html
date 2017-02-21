@@ -37,21 +37,31 @@
 				<li><img src="img/4.jpg" /></li>
 			</ul>
 		</div>
+		<script type="text/javascript" src="js/move.js" ></script>
 		<script>
+		
 		var i=0;
 		var oList=document.getElementById("list");
-		if(i==0){
+		setInterval(function(){
 			
-		var timer=setInterval(function(){
-			
-			oList.style.top=i+"px";
+			startMove(oList,{top:i});
 			i=i-300;
 			if(i==-1200){
-				i=0;
-			}			
-		},3000);	
-		}
-		console.log(i);
+			i=0;
+			}
+		},3000);
+		
+//		if(i==0){
+//			
+//		var timer=setInterval(function(){
+//			
+//			oList.style.top=i+"px";
+//			i=i-300;
+//			if(i==-1200){
+//				i=0;
+//			}			
+//		},3000);	
+//		}
 		</script>
 	</body>
 </html>
